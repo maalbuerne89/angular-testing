@@ -1,0 +1,19 @@
+<div class="listado">
+    <article *ngFor="let noticia of noticias;let i=index" class="articulo"
+        [ngClass]="{'right-border': i%2===0}">
+        <div class="noticia-header">
+            <h2>
+                {{ noticia.titulo }} <br>
+                <span>{{ noticia.fecha }}</span>
+            </h2>
+            <div class="noticia-menu">
+                <a href="javascript:void(0)" [routerLink]="['/editar', noticia.id]" >Editar</a>
+                <a href="javascript:void(0)" id="eliminar{{noticia.id}}" (click)="removeNoticia(noticia.id)" style="color: red !important;">X</a>
+            </div>
+        </div>
+        
+        <img src="{{noticia.imagen_titulo.url}}" alt="{{noticia.titulo}}">
+        <div class="texto" [innerHTML]="getResumen(noticia.content)"></div>
+        <a [routerLink]="['/detalles', noticia.id]">Seguir leyendo</a>
+    </article>
+</div>

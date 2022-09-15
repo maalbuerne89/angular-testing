@@ -1,0 +1,17 @@
+<div class="noticia-editar">
+    <form [formGroup]="noticiaForm" (ngSubmit)="onSubmit(noticiaForm.value)">
+        <div class="form-control">
+            <label for="descripcion" class="mb-1">
+                Descripción
+            </label>
+            <textarea class="mb-1" id="descripcion" type="text" formControlName="descripcion">
+            </textarea>
+            <span *ngIf="!noticiaForm.valid" style="color: red;">Campo requerido</span>
+        </div>
+        
+        <section class="buttons-right">
+            <button class="button" (click)="onCancel()">Cancelar</button>
+            <button class="button guardar" type="submit" style="margin-left: 1rem;" [disabled]="!noticiaForm.valid">Guardar</button>
+        </section>
+    </form>
+</div>

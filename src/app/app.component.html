@@ -1,0 +1,19 @@
+<!-- Toolbar -->
+<div class="container">
+  <div class="toolbar" role="banner" [ngClass]="{'in-home': home}">
+    <div>
+      <a *ngIf="!home" [routerLink]="['/noticias']" style="color: azure; font-size: 35px;">
+        <strong><</strong>
+      </a>
+    </div>
+    <h2 id="header-title">{{title}} <br>
+      <span class="section">{{subtitle}}</span>
+    </h2>
+  </div>
+
+  <div class="content" role="main" >
+    <div style="width: 100%;">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

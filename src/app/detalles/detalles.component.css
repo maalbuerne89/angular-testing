@@ -1,0 +1,23 @@
+.noticia-detalle{
+    /* display: flex;
+    flex-direction: row; */
+    margin-top: 1rem;
+    max-width: 100%;
+}
+
+h5 {
+    font-size: 22px;
+    font-style: italic;
+    font-weight: 500;
+    color: #aaa;
+    /* font-family: "Open Sans" !important; */
+}
+
+img {
+    float: right;
+    margin: 0px 0px 20px 20px;
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;    
+}

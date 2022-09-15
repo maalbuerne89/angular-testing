@@ -1,0 +1,22 @@
+.noticia-editar{
+    margin: 1rem;
+    max-width: 100%;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.mb-1 {
+    margin-bottom: 1rem;
+}
+
+textarea{
+    min-height: 5rem;
+}
+
+.buttons-right {
+    display: flex;
+    justify-content: end;
+}
